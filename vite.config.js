@@ -12,7 +12,7 @@ export default defineConfig({
     alias: { '~': path.resolve(__dirname, 'app') },
   },
   server: { port: 7777 },
-  assetsInclude: ['**/*.glb', '**/*.hdr', '**/*.glsl'],
+  assetsInclude: ['**/*.glb', '**/*.hdr', '**/*.glsl','**/*.glsl?raw'],
   build: { assetsInlineLimit: 1024 },
   plugins: [
     mdx({
