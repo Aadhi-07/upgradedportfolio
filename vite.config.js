@@ -1,27 +1,24 @@
-import { vitePlugin as remix } from '@remix-run/dev';
 import { defineConfig } from 'vite';
 import jsconfigPaths from 'vite-jsconfig-paths';
 import mdx from '@mdx-js/rollup';
-import remarkFrontmatter from 'remark-frontmatter';
-import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 import rehypeImgSize from 'rehype-img-size';
 import rehypeSlug from 'rehype-slug';
 import rehypePrism from '@mapbox/rehype-prism';
+import glsl from 'vite-plugin-glsl'; // <-- add this
 import path from 'path';
 
 export default defineConfig({
   resolve: {
-    alias: {
-      '~': path.resolve(__dirname, 'app'),
-    },
+    alias: { '~': path.resolve(__dirname, 'app') },
   },
+  server: { port: 7777 },
+  assetsInclude: ['**/*.glb', '**/*.hdr', '**/*.glsl'],
+  build: { assetsInlineLimit: 1024 },
   plugins: [
     mdx({
       rehypePlugins: [[rehypeImgSize, { dir: 'public' }], rehypeSlug, rehypePrism],
-      remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
-      providerImportSource: '@mdx-js/react',
     }),
-    remix(), // <-- only the Node-compatible Remix plugin
     jsconfigPaths(),
+    glsl(), // <-- add this
   ],
 });

@@ -61,6 +61,7 @@
     "remark-mdx-frontmatter": "^4.0.0",
     "storybook": "^10.1.8",
     "vite": "^5.1.0",
-    "vite-jsconfig-paths": "^2.0.1"
+    "vite-jsconfig-paths": "^2.0.1",
+    "vite-plugin-glsl": "^1.5.5"
   }
 }
