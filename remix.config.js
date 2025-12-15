@@ -1,9 +1,9 @@
-import { defineConfig } from '@remix-run/dev';
+import pkg from '@remix-run/dev';
+const { defineConfig } = pkg;
 
 export default defineConfig({
   appDirectory: "app",
-  // use Node target for server build
-  serverBuildTarget: "node-cjs",
+  serverBuildTarget: "node-cjs", // build for Node
   server: "./build/index.js",
   ignoredRouteFiles: ["**/.*"],
   future: {
