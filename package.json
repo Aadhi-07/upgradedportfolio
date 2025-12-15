@@ -1,41 +1,41 @@
 {
   "name": "portfolio",
-  "homepage": "https://Aadhithiyacom",
+  "version": "1.0.0",
   "description": "Portfolio site for Aadhithiya J - AI Engineer",
-  "repository": "https://github.com/Aadhi-07",
-  "author": "Aadhithiya J <",
-  "sideEffects": false,
+  "author": "Aadhithiya J",
+  "private": true,
   "type": "module",
-  "scripts": {
-    "build": "remix vite:build",
-    "dev": "node ./scripts/dev.cjs && remix vite:dev",
-    "start": "wrangler pages dev ./build/client",
-    "postinstall": "node ./scripts/draco.cjs",
-    "deploy": "npm run build && wrangler pages deploy ./build/client --project-name portfolio",
-    "dev:storybook": "storybook dev -p 6006",
-    "build:storybook": "storybook build",
-    "deploy:storybook": "wrangler pages deploy ./storybook-static --project-name portfolio-storybook --branch main"
+  "sideEffects": false,
+
+  "engines": {
+    "node": ">=18"
   },
+
+  "scripts": {
+    "dev": "remix vite:dev",
+    "build": "remix vite:build",
+    "start": "remix-serve ./build/server/index.js",
+    "postinstall": "node ./scripts/draco.cjs",
+    "dev:storybook": "storybook dev -p 6006",
+    "build:storybook": "storybook build"
+  },
+
   "dependencies": {
     "@aws-sdk/client-ses": "^3.515.0",
     "@mdx-js/react": "^3.0.1",
-    "@remix-run/cloudflare": "^2.7.1",
-    "@remix-run/cloudflare-pages": "^2.7.1",
     "@remix-run/express": "^2.17.2",
     "@remix-run/react": "^2.7.1",
     "express": "^5.2.1",
-    "firebase-functions": "^7.0.1",
     "framer-motion": "11.0.5",
     "isbot": "^4.1.0",
-    "miniflare": "^3.20231030.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rehype-img-size": "^1.0.1",
     "rehype-slug": "^6.0.0",
-    "remix-google-cloud-functions": "^0.1.0",
     "three": "^0.161.0",
     "three-stdlib": "^2.29.4"
   },
+
   "devDependencies": {
     "@csstools/postcss-global-data": "^2.1.1",
     "@mapbox/rehype-prism": "^0.9.0",
@@ -64,8 +64,6 @@
     "remark-mdx-frontmatter": "^4.0.0",
     "storybook": "^10.1.8",
     "vite": "^5.1.0",
-    "vite-jsconfig-paths": "^2.0.1",
-    "wrangler": "^4.54.0"
+    "vite-jsconfig-paths": "^2.0.1"
   }
-  
 }
