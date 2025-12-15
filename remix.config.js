@@ -1,9 +1,6 @@
-import pkg from '@remix-run/dev';
-const { defineConfig } = pkg;
-
-export default defineConfig({
+export default {
   appDirectory: "app",
-  serverBuildTarget: "node-cjs", // build for Node
+  serverBuildTarget: "node-cjs",   // build for Node, not Cloudflare
   server: "./build/index.js",
   ignoredRouteFiles: ["**/.*"],
   future: {
@@ -11,4 +8,4 @@ export default defineConfig({
     v2_errorBoundary: true,
     v2_normalizeFormMethod: true
   }
-});
+};
