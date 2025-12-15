@@ -10,13 +10,6 @@ import rehypePrism from '@mapbox/rehype-prism';
 import path from 'path';
 
 export default defineConfig({
-  assetsInclude: ['**/*.glb', '**/*.hdr', '**/*.glsl'],
-  build: {
-    assetsInlineLimit: 1024,
-  },
-  server: {
-    port: 7777,
-  },
   resolve: {
     alias: {
       '~': path.resolve(__dirname, 'app'),
@@ -28,13 +21,7 @@ export default defineConfig({
       remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
       providerImportSource: '@mdx-js/react',
     }),
-    remix({
-      routes(defineRoutes) {
-        return defineRoutes(route => {
-          route('/', 'routes/home/route.js', { index: true });
-        });
-      },
-    }),
+    remix(), // <-- only the Node-compatible Remix plugin
     jsconfigPaths(),
   ],
 });
