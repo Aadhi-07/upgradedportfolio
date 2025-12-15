@@ -1,16 +1,8 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "public",
-  "framework": null,
-  "functions": {
-    "api/index.js": {
-      "runtime": "nodejs18.x"
-    }
-  },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/build/server/index.js"
+      "dest": "/"
     }
   ]
 }
