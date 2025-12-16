@@ -1,9 +1,9 @@
 {
   "functions": {
-    "api/index.js": {
-      "runtime": "nodejs18.x"
-    }
-  },
+  "api/**/*.js": {
+    "runtime": "@vercel/node@20.x"
+  }
+},
   "routes": [
     { "src": "/(.*)", "dest": "api/index.js" }
   ]
