@@ -1,4 +1,4 @@
-import { s, f, g, j, h, i, e, p, k } from "./assets/server-build-BUqUCazy.js";
+import { s, f, g, j, h, i, e, p, k } from "./build/server/assets/server-build-BUqUCazy.js";
 import "react/jsx-runtime";
 import "@remix-run/react";
 import "isbot";

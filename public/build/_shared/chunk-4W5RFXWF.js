@@ -1,0 +1,1 @@
+var e="/build/_assets/iphone-11-S4EFIVYB.glb";var t="/build/_assets/macbook-pro-C6DU7EB5.glb";var o={SpringUp:"spring-up",LaptopOpen:"laptop-open"},i={phone:{url:e,width:374,height:512,position:{x:0,y:0,z:0},animation:o.SpringUp},laptop:{url:t,width:1280,height:800,position:{x:0,y:0,z:0},animation:o.LaptopOpen}};export{o as a,i as b};

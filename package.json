@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "remix dev",
     "build": "remix build",
-    "start": "remix-serve ./build/server/index.js ",
+    "start": "remix-serve ./index.js ",
     "postinstall": "node ./scripts/draco.cjs",
     "dev:storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build"
