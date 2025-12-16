@@ -1,6 +1,7 @@
 {
-  
-  "framework":"remix",
+  "framework": "remix",
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
   "routes": [
     {
       "src": "/(.*)",
@@ -8,4 +9,3 @@
     }
   ]
 }
-
