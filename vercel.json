@@ -1,11 +1,10 @@
 {
-  "framework": "remix",
-  "buildCommand": "npm run build",
-  "outputDirectory": "build",
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
+  "functions": {
+    "api/index.js": {
+      "runtime": "nodejs18.x"
     }
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "api/index.js" }
   ]
 }

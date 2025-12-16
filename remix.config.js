@@ -1,6 +1,7 @@
+/** @type {import('@remix-run/dev').AppConfig} */
 export default {
   appDirectory: "app",
-  ignoredRouteFiles: ["**/.*"],
-  serverBuildTarget: "node-cjs", // build for Node
-  server: "index.js",     // Remix will output here
+  assetsBuildDirectory: "public/build",
+  publicPath: "/build/",
+  serverBuildPath: "build/server/index.js"
 };

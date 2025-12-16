@@ -1,0 +1,1 @@
+import{b as t}from"/build/_shared/chunk-4HXKWYDW.js";import{c as e}from"/build/_shared/chunk-Q3IECNXJ.js";var o=e(t(),1);function i(){return(0,o.jsx)("main",{style:{padding:"2rem",color:"white"},children:(0,o.jsx)("h1",{children:"Portfolio Live \u{1F680}"})})}export{i as default};
